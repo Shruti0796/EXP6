@@ -5,5 +5,9 @@ app = Flask(__name__)
 def index():
 	return"<h1>Shruti Shanklesha</h1><br><h2>2410074</h2>"
 
+@app.route("/resume")
+def resume():
+        return render_templates("resume.html")
+
 if __name__ == "__main__":
 	app.run(host = "0.0.0.0", port = 5000, debug= True)
